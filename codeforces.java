@@ -2,20 +2,18 @@ import java.util.*;
 public class codeforces {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        
-            long n = sc.nextInt();
-            long m = sc.nextInt();
-            long a = sc.nextInt();
-            long x = 0, y = 0;
+        int t = sc.nextInt();
+        while(t-- > 0){
+            long a = sc.nextLong();
+            long b = sc.nextLong();
 
-            x = n/a;
-            y = m/a;
-
-            if(n%a !=0) x++;
-            if(m%a !=0) y++;
-            System.out.println(x*y);
-
-            // System.out.println((long)(Math.ceil(n/a) * Math.ceil(m/a)));       //One line solution
+            
+            if(a%b==0)  System.out.println(0);
+            else {
+                long res = b - a%b;
+                System.out.println(res);
+            }
+        }
            
         sc.close();
 
